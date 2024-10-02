@@ -1,0 +1,12 @@
+Dockerfile
+.dockerignore
+.env
+build/
+.gradle/
+(These files are usually generated during the build process and are not needed in the Docker image.)
+.git/
+.gitignore
+.idea/
+*.iml
+.vscode/
+*.log
