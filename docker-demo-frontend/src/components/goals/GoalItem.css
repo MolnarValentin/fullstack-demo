@@ -1,12 +1,19 @@
 .goal-item {
   margin: 1rem 0;
   padding: 1rem;
-  border: 1px solid #570080;
-  color: white;
-  background-color: #570080;
+  border: 2px solid #555555;
+  color: #333333;
+  background-color: #ffffff;
   text-align: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  border-radius: 30px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  border-radius: 12px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.goal-item:hover,
+.goal-item:active {
+  background-color: #f0f0f0;
+  transform: scale(1.03);
 }

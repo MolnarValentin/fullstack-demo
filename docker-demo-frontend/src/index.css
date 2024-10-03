@@ -3,53 +3,76 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
   margin: 0;
-  background-color: #383838;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  padding: 2rem;
 }
 
 label {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
   display: block;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
+  color: #333333;
 }
 
 input {
   font: inherit;
   padding: 1rem;
-  border: 1px solid #ccc;
-  font-size: 1.5rem;
+  border: 2px solid #555555;
+  font-size: 1.25rem;
   display: block;
   width: 100%;
   margin-bottom: 1rem;
-  border-radius: 30px;
-  text-align: center;
-  color: #242424;
+  border-radius: 12px;
+  background-color: #404040;
+  text-align: left;
+  color: #f0f0f0;
+  transition: all 0.3s ease;
 }
 
 input:focus {
   outline: none;
-  border-color: #6e0040;
-  background-color: #ffdff2;
+  border-color: #3498db;
+  background-color: #505050;
 }
 
 button {
   font: inherit;
-  background-color: #6e0040;
-  color: white;
-  border: 1px solid #6e0040;
-  border-radius: 30px;
-  padding: 0.5rem 1.5rem;
+  background-color: #3498db;
+  color: #ffffff;
+  border: 2px solid #3498db;
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover,
 button:active {
-  background-color: #b80e71;
-  border-color: #b80e71;
+  background-color: #2d81bf;
+  border-color: #2d81bf;
+  transform: scale(1.05);
 }
+
+body {
+  margin: 0;
+  padding-top: 50px; /* Ensures some space at the top */
+}
+
+.container {
+  max-width: 450px;
+  width: 100%;
+  padding: 2rem;
+  background-color: #333333;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  margin: 0 auto; /* Centers the container horizontally */
+}
+
