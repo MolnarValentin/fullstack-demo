@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: goals
+  template:
+    metadata:
+      labels:
+        app: goals
+    spec:
+      containers:
+        - name: goals
+          image: valentin7878/goals-api:7
+          imagePullPolicy: Always
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              valueFrom:
+                configMapKeyRef:
+                  name: backend-env
+                  key: spring_profiles_active
+            - name: MONGODB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: backend-secret
+                  key: mongodb_username
+            - name: MONGODB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: backend-secret
+                  key: mongodb_password
+          volumeMounts:
+            - mountPath: /app/docker-demo-backend/logs
+              name: log-volume
+      volumes:
+        - name: log-volume
+          persistentVolumeClaim:
+            claimName: logs-pvc
