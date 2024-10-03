@@ -15,6 +15,9 @@ target/
 *.env
 secret.yml
 
+# Text files
+*.txt
+
 # IDEs
 .idea/
 *.iml
